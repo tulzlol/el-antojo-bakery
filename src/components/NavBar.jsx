@@ -1,6 +1,7 @@
 import React from 'react';
 import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap';
-
+import CartWidget from './CartWidget';
+import Icon from './Icon';
 
 
 const NavBar = () => {
@@ -21,23 +22,12 @@ const NavBar = () => {
                         <Nav.Link href="#home">Quienes somos</Nav.Link>
                         <Nav.Link href="#home">Contacto</Nav.Link>
 
-
-
-                        <NavDropdown title="a" id="basic-nav-dropdown">
-
-                            <NavDropdown.Item href="#action/3.1">Empty</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Empty</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Empty</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">Empty</NavDropdown.Item>
-                        </NavDropdown>
+                <CartWidget />
                     </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
-        
     );
 }
 
-
 export default NavBar;
-
