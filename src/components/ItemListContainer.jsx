@@ -14,7 +14,7 @@ const ItemListContainer = () => {
         new Promise((resolve) =>
             setTimeout(() => {
                 resolve(items);
-            }, 50)
+            }, 1)
         ).then((data) => {
             if (category) {
                 const categories = data.filter(
@@ -29,7 +29,7 @@ const ItemListContainer = () => {
 
 
     return (
-        <Container className="container">
+        <Container className="container-fluid d-flex text-center">
         <ItemList products={products} />
         </Container>
     );

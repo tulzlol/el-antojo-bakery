@@ -5,6 +5,7 @@ export const items = [
         name: "Muffin",
         category: "muffins",
         description: "Lorem",
+        price: "$300",
         stock: 10,
     },
     {
@@ -13,6 +14,7 @@ export const items = [
         name: "Muffin",
         category: "muffins",
         description: "Lorem",
+        price: "$300",
         stock: 10,
     },
     {
@@ -21,6 +23,7 @@ export const items = [
         name: "Muffin",
         category: "muffins",
         description: "Lorem",
+        price: "$300",
         stock: 10,
     },
     {
@@ -29,6 +32,7 @@ export const items = [
         name: "Muffin",
         category: "muffins",
         description: "Lorem",
+        price: "$300",
         stock: 10,
     },
     {
@@ -37,6 +41,7 @@ export const items = [
         name: "Muffin",
         category: "muffins",
         description: "Lorem",
+        price: "$300",
         stock: 10,
     },
     {
@@ -45,6 +50,7 @@ export const items = [
         name: "Pan",
         category: "panes-saborizados",
         description: "Lorem",
+        price: "$400",
         stock: 10,
     },
     {
@@ -53,6 +59,7 @@ export const items = [
         name: "Pan",
         category: "panes-saborizados",
         description: "Lorem",
+        price: "$400",
         stock: 10,
     },
     {
@@ -61,6 +68,7 @@ export const items = [
         name: "Pan",
         category: "panes-saborizados",
         description: "Lorem",
+        price: "$400",
         stock: 10,
     },
     {
@@ -69,6 +77,7 @@ export const items = [
         name: "Pan",
         category: "panes-saborizados",
         description: "Lorem",
+        price: "$400",
         stock: 10,
     },
     {
@@ -77,6 +86,7 @@ export const items = [
         name: "Pan",
         category: "panes-saborizados",
         description: "Lorem",
+        price: "$400",
         stock: 10,
     },
     {
@@ -85,6 +95,7 @@ export const items = [
         name: "Galleta",
         category: "galletas",
         description: "Lorem",
+        price: "$200",
         stock: 10,
     },
     {
@@ -93,6 +104,7 @@ export const items = [
         name: "Galleta",
         category: "galletas",
         description: "Lorem",
+        price: "$200",
         stock: 10,
     },
     {
@@ -101,6 +113,7 @@ export const items = [
         name: "Galleta",
         category: "galletas",
         description: "Lorem",
+        price: "$200",
         stock: 10,
     },
     {
@@ -109,6 +122,7 @@ export const items = [
         name: "Galleta",
         category: "galletas",
         description: "Lorem",
+        price: "$200",
         stock: 10,
     },
     {
@@ -117,6 +131,7 @@ export const items = [
         name: "Galleta",
         category: "galletas",
         description: "Lorem",
+        price: "$350",
         stock: 10,
     },
     {
@@ -125,6 +140,7 @@ export const items = [
         name: "Alfajor",
         category: "alfajores",
         description: "Lorem",
+        price: "$350",
         stock: 10,
     },
     {
@@ -133,6 +149,7 @@ export const items = [
         name: "Alfajor",
         category: "alfajores",
         description: "Lorem",
+        price: "$350",
         stock: 10,
     },
     {
@@ -141,6 +158,7 @@ export const items = [
         name: "Alfajor",
         category: "alfajores",
         description: "Lorem",
+        price: "$350",
         stock: 10,
     },
     {
@@ -149,6 +167,7 @@ export const items = [
         name: "Alfajor",
         category: "alfajores",
         description: "Lorem",
+        price: "$350",
         stock: 10,
     },
     {
@@ -157,6 +176,7 @@ export const items = [
         name: "Alfajor",
         category: "alfajores",
         description: "Lorem",
+        price: "$350",
         stock: 10,
     },
 ];

@@ -2,7 +2,7 @@ import Item from "./Item";
 
 const ItemList = ({ products }) => {
         return (
-                <div className="row justify-content-around">
+                <div className="row text-center justify-content-md-center">
                 {products.map((product) => <Item products={product} />)}
                 </div>
         )
