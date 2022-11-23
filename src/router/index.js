@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import Category from "../views/category";
+import CategoryView from "../views/category"
 import Item from "../views/item";
 
 export const router = createBrowserRouter([
@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
     },
     {
         path: "/category/:category",
-        element: <Category />,
+        element: <CategoryView />,
     },
     {
         path: "/item/:id",

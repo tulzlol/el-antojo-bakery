@@ -1,4 +1,4 @@
-export const item = [
+export const items = [
     {
         id: "1",
         image: "https://picsum.photos/200/300",
@@ -50,16 +50,16 @@ export const item = [
     {
         id: "7",
         image: "https://picsum.photos/200/300",
-        name: "panes-saborizados",
-        category: "s",
+        name: "Pan",
+        category: "panes-saborizados",
         description: "Lorem",
         stock: 10,
     },
     {
         id: "8",
         image: "https://picsum.photos/200/300",
-        name: "panes-saborizados",
-        category: "P",
+        name: "Pan",
+        category: "panes-saborizados",
         description: "Lorem",
         stock: 10,
     },

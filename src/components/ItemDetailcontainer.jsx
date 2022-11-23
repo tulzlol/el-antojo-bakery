@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
+import { Container } from "react-bootstrap";
 
-import { item as itemMock } from "../mocks/item-mock";
+import { items as itemMock } from "../mocks/item-mock";
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null);
 
     useEffect(() => {
-        new Promise((resolve) => setTimeout(() => resolve(itemMock[0]), 2000)).then(
+        new Promise((resolve) => setTimeout(() => resolve(itemMock[0]), 50)).then(
             (data) => setItem(data)
         );
     }, []);
@@ -16,7 +17,9 @@ const ItemDetailContainer = () => {
         return <p>Loading...</p>;
     }
 
-    return <ItemDetail item={item} />;
+    return (<Container>
+                <ItemDetail item={item}/>
+            </Container>) ;
 };
 
 export default ItemDetailContainer;

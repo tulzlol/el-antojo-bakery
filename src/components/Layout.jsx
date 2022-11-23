@@ -1,12 +1,11 @@
 import Navbar from "./NavBar";
 
-const Layout = ({ children }) => {
+export const Layout = ({ children }) => {
     return (
-        <main style={{backgroundColor: "blue"}}>
+        <main style={{backgroundColor: "white"}}>
             <Navbar />
             {children}
         </main>
     );
 };
 
-export default Layout;

@@ -1,11 +1,10 @@
-import React from "react";
-import { Container } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 import ItemList from "./ItemList";
 
-import { item } from "../mocks/item-mock";
+import { items } from "../mocks/item-mock";
 
 const ItemListContainer = () => {
     const { category } = useParams();
@@ -14,18 +13,24 @@ const ItemListContainer = () => {
     useEffect(() => {
         new Promise((resolve) =>
             setTimeout(() => {
-                resolve(item);
-            }, 1)
-        ).then((data) => setProducts(data));
+                resolve(items);
+            }, 50)
+        ).then((data) => {
+            if (category) {
+                const categories = data.filter(
+                    (product) => product.category === category);
+                    setProducts(categories);
+            } else {
+                setProducts(data);
+            }
+        });
     }, [category]);
-    if (products.length === 0) {
-        return <p>Loading</p>
-    }
+
 
 
     return (
         <Container className="container">
-            <ItemList products={products}/>
+        <ItemList products={products} />
         </Container>
     );
 };
