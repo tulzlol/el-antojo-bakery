@@ -1,15 +1,14 @@
-import React from 'react';
 import './App.css';
+import ItemDetailContainer from './components/ItemDetailcontainer';
 import ItemListContainer from './components/ItemListContainer';
-import NavBar from './components/NavBar.jsx';
+import Layout from './components/Layout.jsx';
 
 function App() {
   return (
     <div className="App">
-      <>
-      <NavBar/>
-      <ItemListContainer title={"Nombre producto"} greeting={"Hello"}/>
-      </>
+      <Layout/>
+      <ItemListContainer/>
+      <ItemDetailContainer/>
     </div>
   );
 }

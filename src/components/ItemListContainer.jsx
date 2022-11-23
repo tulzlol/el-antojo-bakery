@@ -1,21 +1,33 @@
 import React from "react";
-import { Container, Button, Card } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({ title, greeting }) => {
+import ItemList from "./ItemList";
+
+import { item } from "../mocks/item-mock";
+
+const ItemListContainer = () => {
+    const { category } = useParams();
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        new Promise((resolve) =>
+            setTimeout(() => {
+                resolve(item);
+            }, 1)
+        ).then((data) => setProducts(data));
+    }, [category]);
+    if (products.length === 0) {
+        return <p>Loading</p>
+    }
+
+
     return (
-        <Container>
-            <Card className="mt-5" style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" alt="Imagen no definida" />
-                <Card.Body>
-                    <Card.Title>{title}</Card.Title>
-                    <Card.Text>
-                        {greeting}
-                    </Card.Text>
-                    <Button variant="primary">Agregar al carrito</Button>
-                </Card.Body>
-            </Card>
+        <Container className="container">
+            <ItemList products={products}/>
         </Container>
-    )
-}
+    );
+};
 
 export default ItemListContainer;
