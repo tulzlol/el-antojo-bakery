@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import ItemListContainer from "../components/ItemListContainer";
 import { Layout } from "../components/Layout";
 

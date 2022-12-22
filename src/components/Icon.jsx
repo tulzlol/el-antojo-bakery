@@ -1,14 +1,16 @@
 import React from "react";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCartShopping, faExclamationTriangle} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping, faExclamationTriangle, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-const Icon = (cartName) => {
+export const Icon = (cartName) => {
         switch (cartName) {
-            case "cart":
-                    return (<FontAwesomeIcon icon={faCartShopping} />)
-            default: return(
-                <FontAwesomeIcon icon={faExclamationTriangle}/> 
-            )
+                case "cart":
+                        return (<FontAwesomeIcon icon={faCartShopping} />)
+                case "trash":
+                        return (<FontAwesomeIcon icon={faTrash} />)
+                default: return (
+                        <FontAwesomeIcon icon={faExclamationTriangle} />
+                )
         }
 }
 

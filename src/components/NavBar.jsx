@@ -9,7 +9,7 @@ const NavBar = () => {
             <Container>
                 <Navbar.Brand >EL ANTOJO BAKERY</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Collapse id="basic-navbar-nav justify-content-end">
                     <Nav className="mx-auto">
                         <Nav.Link as={Link} to="/" >Inicio</Nav.Link>
                         <NavDropdown title="Productos " id="basic-nav-dropdown">
@@ -20,10 +20,11 @@ const NavBar = () => {
                         </NavDropdown>
                         <Nav.Link href="#home">Quienes somos</Nav.Link>
                         <Nav.Link href="#home">Contacto</Nav.Link>
-
-                <CartWidget />
                     </Nav>
                 </Navbar.Collapse>
+                <Nav>
+                    <CartWidget/>
+                </Nav>
             </Container>
         </Navbar>
     );

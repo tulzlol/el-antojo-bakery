@@ -1,11 +1,9 @@
-import Item from "./Item";
+import { Item } from "./Item";
 
-const ItemList = ({ products }) => {
+export const ItemList = ({ products }) => {
         return (
-                <div className="row text-center justify-content-md-center">
-                {products.map((product) => <Item products={product} />)}
-                </div>
+                <ul className="row text-center justify-content-center">
+                {products.map((product) => (<Item key={product.id} products={product} />))}
+                </ul>
         )
-}
-
-export default ItemList;
+};

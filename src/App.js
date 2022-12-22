@@ -1,5 +1,4 @@
 import './App.css';
-import ItemDetailContainer from './components/ItemDetailcontainer';
 import ItemListContainer from './components/ItemListContainer';
 import { Layout } from './components/Layout';
 

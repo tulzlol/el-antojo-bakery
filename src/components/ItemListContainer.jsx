@@ -1,38 +1,21 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import { useGetItem } from "../hooks/useGetItem";
+import { ItemList } from "./ItemList"
+import { Loading } from "./Loading";
 
-import ItemList from "./ItemList";
-
-import { items } from "../mocks/item-mock";
 
 const ItemListContainer = () => {
-    const { category } = useParams();
-    const [products, setProducts] = useState([])
-
-    useEffect(() => {
-        new Promise((resolve) =>
-            setTimeout(() => {
-                resolve(items);
-            }, 1)
-        ).then((data) => {
-            if (category) {
-                const categories = data.filter(
-                    (product) => product.category === category);
-                    setProducts(categories);
-            } else {
-                setProducts(data);
-            }
-        });
-    }, [category]);
+    const items = useGetItem();
+    if (!items) {
+        return <Loading />;
+    }
 
 
-
-    return (
-        <Container className="container-fluid d-flex text-center">
-        <ItemList products={products} />
-        </Container>
-    );
+return (
+    <Container className="container-fluid d-flex justify-content-center text-center">
+        <ItemList products={items} />
+    </Container>
+);
 };
 
 export default ItemListContainer;

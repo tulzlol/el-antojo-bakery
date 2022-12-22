@@ -1,34 +1,19 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useGetItem } from "../hooks/useGetItem";
 import ItemDetail from "./ItemDetail";
-import { Container } from "react-bootstrap";
+import { Loading } from "./Loading";
 
-import { items } from "../mocks/item-mock";
 
 const ItemDetailContainer = () => {
-    const { id } = useParams();
-    const [item, setItem] = useState([]);
-    useEffect(() => {
-        if (!id) return console.log("error");
-        new Promise((resolve) =>
-            setTimeout(() => {
-                resolve(items.find(
-                    (product) => product.id === id));
-            }, 1)
-        ).then((data) => {
-            if (data) {
-                setItem(data);
-            } else {
-                return (console.error("error"));
-            }
-        });
-    }, [id]);
+    const item = useGetItem();
 
+    if (!item) {
+        return <Loading />;
+    }
 
     return (
-        <Container className="container-fluid d-flex text-center">
+        <div className="d-flex text-center justify-content-center">
             <ItemDetail item={item} />
-        </Container>
+        </div>
     );
 };
 
