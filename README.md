@@ -3,7 +3,7 @@ Bienvenido al proyecto de eCommerce para CoderHouse de Marco Villani.
 
 Este proyecto consiste en una página web de compras en línea para la pastelería "El Antojo Bakery". Utilizamos HTML, REACT, JS, y CSS para desarrollar la página y hemos incorporado Bootstrap, SweetAlert2 y FontAwesome para darle un aspecto profesional y agradable al usuario.
 
-Al visitar la página, encontrarás una variedad de deliciosos pasteles y dulces disponibles para la compra. Puedes navegar por las diferentes categorías utilizando la barra de navegación y ver detalles adicionales sobre cada producto haciendo clic en la imagen.
+Al visitar la página, encontrarás una variedad de deliciosos postres y panificados disponibles para la compra. Puedes navegar por las diferentes categorías utilizando la barra de navegación y ver detalles adicionales sobre cada producto haciendo clic en la imagen.
 
 Cuando encuentres lo que estás buscando, simplemente agrega los productos a tu carrito de compras y sigue las instrucciones para completar tu pedido.
 
