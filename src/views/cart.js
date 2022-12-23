@@ -4,7 +4,7 @@ import { Item } from "../components/Item";
 import { Layout } from "../components/Layout";
 import { TrashWidget } from "../components/TrashWidget";
 import { CartContext } from "../context/cartContext";
-import { Button, Card } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Icon } from "../components/Icon"
 
 const CartView = () => {
@@ -21,7 +21,7 @@ const CartView = () => {
                     <div className="mt-5 text-center justify-center">
                         <svg> {Icon("cart")} </svg>
                         <div className="mt-4">
-                            <h2 mt-5>No has agregado ningun producto.</h2>
+                            <h2>No has agregado ningun producto.</h2>
                         </div>
                         <Button
                             onClick={() => navigate("/")}
@@ -32,27 +32,20 @@ const CartView = () => {
                     </div>
                 ) : (
                     <div>
-                        <div className="d-flex row">
-                            {items.map((product) => {
+                        <div className="row text-center">
+                            {items.map((product, index) => {
                                 const quantityAdded = product.quantityAdded;
                                 return (
-                                    <section className="text-center">
-                                        <div>
-                                            <Item
-                                                key={product.item.id}
+                                            <Item trash={true}
+                                                key={"item" + index.toString()}
                                                 products={product.item}
                                                 quantityAdded={quantityAdded}
-                                            />
-                                        </div>
-                                        <div>
-                                            <TrashWidget itemId={product.item.id} />
-                                        </div>
-                                    </section>
+                                                />
                                 );
                             })}
                         </div>
                         <div className="text-center">
-                            <div className="mb-2">
+                            <div className="mt-3 mb-2">
                                 <span>
                                     Total a pagar: <strong>${totalAmount}</strong>
                                 </span>

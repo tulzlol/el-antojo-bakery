@@ -83,23 +83,29 @@ const CheckoutView = () => {
                     </Card.Title>
                     <form onSubmit={handleFinalizePurchase} className="mt-4">
                         <div className="flex flex-col">
-                            <input
-                                className="mt-2"
-                                placeholder="Nombre Completo"
-                                required
-                            />
-                            <input
-                                className="h-8 pl-4 mb-4 rounded-md"
-                                placeholder="Numero de Telefono"
-                                type="number"
-                                required
-                            />
-                            <input
-                                className="h-8 pl-4 mb-4 rounded-md"
-                                placeholder="Email"
-                                type={"email"}
-                                required
-                            />
+                            <div>
+                                <input
+                                    className="mt-2 mb-4"
+                                    placeholder="Nombre Completo"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    className="mb-4 rounded-md"
+                                    placeholder="Numero de Telefono"
+                                    type="number"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <input
+                                    className="h-8 pl-4 mb-4 rounded-md"
+                                    placeholder="Email"
+                                    type={"email"}
+                                    required
+                                />
+                            </div>
                         </div>
                         <span>
                             Total a pagar: <strong>${totalAmount}</strong>

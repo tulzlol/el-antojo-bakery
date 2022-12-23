@@ -1,4 +1,20 @@
 import { createContext, useEffect, useState } from "react";
+import Swal from "sweetalert2";
+
+function alertDel () {
+    Swal.fire({
+        text: "Eliminado del carrito con exito.",
+        icon: "success",
+        position: "bottom-end",
+        timer: "1000",
+        showCloseButton: false,
+        backdrop: false,
+        width: "13em",
+        heightAuto: true,
+        showConfirmButton: false,
+        imageSize: "10x5",
+    })
+}
 
 export const CartContext = createContext([]);
 export const CartContextProvider = ({ children }) => {
@@ -35,7 +51,9 @@ export const CartContextProvider = ({ children }) => {
     function removeItem(itemId) {
         setProductsAdded((prevState) =>
             prevState.filter((product) => product.item.id !== itemId)
-        );
+        )
+        alertDel()
+        ;
     }
 
     function clear() {

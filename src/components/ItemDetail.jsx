@@ -3,11 +3,25 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/cartContext";
 import { ItemCount } from "./ItemCount";
+import Swal from "sweetalert2";
+
 
 import "./cards.css"
 
 const ItemDetail = ({ item }) => {
-
+    const alertAdd = () => {
+        Swal.fire({
+            text: "Agregado al carrito con exito.",
+            icon: "success",
+            position: "bottom-end",
+            timer: "1000",
+            showCloseButton: false,
+            backdrop: false,
+            width: "13em",
+            heightAuto: true,
+            showConfirmButton: false,
+        })
+    }
     const { addItem, isInCart } = useContext(CartContext);
     const navigate = useNavigate();
     const [count, setCount] = useState(1);
@@ -24,6 +38,7 @@ const ItemDetail = ({ item }) => {
         else {
             setCurrentStock(currentStock - count);
             addItem(item, count);
+            alertAdd();
         }
     }
 
@@ -44,8 +59,10 @@ const ItemDetail = ({ item }) => {
                     </Card.Text>
                     <Card.Text>
                         ${item.price}
+                    </Card.Text>
+                    <Card.Text>
                         {currentStock > 0 && (
-                            <p className="text-sm">En Stock: {currentStock}</p>
+                            <span>  En Stock:  {currentStock}</span>
                         )}
                     </Card.Text>
 

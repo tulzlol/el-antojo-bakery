@@ -1,9 +1,10 @@
 import { useNavigate, Link } from "react-router-dom";
 import { Card, Button } from "react-bootstrap";
 import { Loading } from "./Loading";
+import { TrashWidget } from "./TrashWidget";
 
 
-export const Item = ({ products, quantityAdded }) => {
+export const Item = ({ products, quantityAdded, trash=false }) => {
 
     const navigate = useNavigate();
 
@@ -17,7 +18,7 @@ export const Item = ({ products, quantityAdded }) => {
     }
 
     return (
-        <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+        <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
             <Card className="mt-5" style={{ width: '18rem' }}>
                 <div className="overflow">
 
@@ -47,6 +48,7 @@ export const Item = ({ products, quantityAdded }) => {
                     <Link to={"/item/" + products.id}>
                         <Button onClick={handleNavigate}  className="mt-2" variant="outline-secondary">Ver detalles</Button>
                     </Link>
+                    {trash && <TrashWidget className="text-center" itemId={products.id} />}
                 </Card.Body>
             </Card>
         </div>
